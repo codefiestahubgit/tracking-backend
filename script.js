@@ -37,10 +37,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
-app.use(cors({
-  // origin: 'https://hackathon.gitjaipur.com',
-  origin: '*',
-}));
+// app.use(cors({
+//   // origin: 'https://hackathon.gitjaipur.com',
+//   origin: '*',
+// }));
+app.use(cors());
 
 // Tracking API endpoint
 app.post('/api/track', async (req, res) => {
